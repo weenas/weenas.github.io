@@ -1,0 +1,135 @@
+baseURL: https://www.weenas.com/
+title: 云淡风轻
+theme: stack
+languageCode: zh-cn
+defaultContentLanguage: zh-cn
+hasCJKLanguage: true
+paginate: 5
+
+#languages:
+#    en:
+#        languageName: English
+#        title: Example Site
+#        weight: 1
+#    zh-cn:
+#        languageName: 中文
+#        title: 演示站点
+#        weight: 2
+
+googleAnalytics:
+
+params:
+  mainSections:
+    - post
+  featuredImageField: image
+  rssFullContent: true
+  favicon:
+    local: true
+    src: img/logo.png
+  sidebar:
+    emoji:
+    avatar:
+      enabled: true
+      local: true
+      src: img/avatar.png
+  article:
+        math: false # 这里关闭是因为我们使用的是 MathJax
+        toc: true # TOC 默认开启
+        readingTime: true
+        license:
+            enabled: true
+            default: '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener">CC BY-SA 4.0</a>'
+  footer:
+    since: 2020
+    customText: 
+  comments:
+    enabled: true
+    provider: waline
+    # Waline client configuration see: https://waline.js.org/en/reference/client.html
+    waline:
+      serverURL: https://waline.weenas.com/
+      lang: zh-CN
+      visitor: true
+      avatar:
+      emoji:
+        - https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba
+        - https://cdn.jsdelivr.net/gh/walinejs/emojis/qq
+        - https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/alus
+      requiredMeta:
+        - name
+        - email
+      placeholder:
+      locale:
+      admin: Eason
+  widgets:
+    homepage: []
+    page: []
+
+menu:
+    main:
+        - identifier: home
+          name: 主页
+          url: /
+          weight: -100
+          params:
+              newTab: false
+              icon: home
+
+        - identifier: categories
+          name: 分类
+          url: /categories
+          weight: -85
+          params:
+              newTab: false
+              icon: home
+
+        - identifier: rss
+          name: RSS
+          url: /index.xml
+          weight: -10
+          params:
+              newTab: true
+              icon: rss
+
+    social:
+        - identifier: github
+          name: GitHub
+          url: https://github.com/easonxiang
+          params:
+              icon: brand-github
+
+        - identifier: twitter
+          name: Twitter
+          url: https://twitter.com
+          params:
+              icon: brand-twitter
+
+related:
+    includeNewer: true
+    threshold: 60
+    toLower: false
+    indices:
+        - name: tags
+          weight: 100
+
+        - name: categories
+          weight: 200
+
+markup: # **Markup Section 非常重要**
+    tableOfContents:
+        endLevel: 5 # 从 5 结束
+        ordered: true
+        startLevel: 2 # 从 2 开始
+    highlight: # 代码高亮配置，对 Pandoc 而言似乎是没用的。稍后会提到如何使代码高亮
+        anchorLineNos: false
+        codeFences: true
+        guessSyntax: false
+        hl_Lines: ""
+        lineAnchors: ""
+        lineNoStart: 1
+        lineNos: true
+        lineNumbersInTable: true
+        noClasses: true
+        style: dracula
+        tabWidth: 4
+
