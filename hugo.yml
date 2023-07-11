@@ -1,100 +1,178 @@
-baseURL: https://weenas.github.io
-title: 云淡风轻
-theme: stack
+baseURL: /
 languageCode: zh-cn
-defaultContentLanguage: zh-cn
-hasCJKLanguage: true
+theme: stack
 paginate: 5
+title: 云淡风轻
 
 #languages:
 #    en:
 #        languageName: English
 #        title: Example Site
+#        description: Example description
 #        weight: 1
 #    zh-cn:
 #        languageName: 中文
 #        title: 演示站点
+#        description: 演示说明
 #        weight: 2
 
+# Change it to your Disqus shortname before using
+#disqusShortname: hugo-theme-stack
+
+# GA Tracking ID
 googleAnalytics:
 
+# Theme i18n support
+# Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
+DefaultContentLanguage: zh-cn
+
+# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
+# This will make .Summary and .WordCount behave correctly for CJK languages.
+hasCJKLanguage: true
+
+permalinks:
+    post: /p/:slug/
+    page: /:slug/
+
 params:
-  mainSections:
-    - post
-  featuredImageField: image
-  rssFullContent: true
-  favicon:
-    local: true
-    src: img/logo.png
-  sidebar:
-    emoji:
-    avatar:
-      enabled: true
-      local: true
-      src: img/avatar.png
-  article:
-        math: false # 这里关闭是因为我们使用的是 MathJax
-        toc: true # TOC 默认开启
+    mainSections:
+        - post
+    featuredImageField: image
+    rssFullContent: true
+    favicon:  # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+
+    footer:
+        since: 2020
+        customText:
+
+    dateFormat:
+        published: Jan 02, 2006
+        lastUpdated: Jan 02, 2006 15:04 MST
+
+    sidebar:
+        emoji: 🍥
+        subtitle: Hello World!
+        avatar:
+            enabled: true
+            local: true
+            src: img/avatar.png
+
+    article:
+        math: false
+        toc: true
         readingTime: true
         license:
             enabled: true
-            default: '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener">CC BY-SA 4.0</a>'
-  footer:
-    since: 2020
-    customText: 
-  comments:
-    enabled: true
-    provider: waline
-    # Waline client configuration see: https://waline.js.org/en/reference/client.html
-    waline:
-      serverURL: https://waline.weenas.com/
-      lang: zh-CN
-      visitor: true
-      avatar:
-      emoji:
-        - https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba
-        - https://cdn.jsdelivr.net/gh/walinejs/emojis/qq
-        - https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/alus
-      requiredMeta:
-        - name
-        - email
-      placeholder:
-      locale:
-      admin: Eason
-  widgets:
-    homepage: []
-    page: []
+            default: Licensed under CC BY-NC-SA 4.0
 
+    comments:
+        enabled: true
+        provider: waline
+        waline:
+            serverURL: https://waline.weenas.com/
+            lang: zh-CN
+            visitor: true
+            avatar:
+            emoji:
+                - https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba
+                - https://cdn.jsdelivr.net/gh/walinejs/emojis/qq
+                - https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/alus
+            requiredMeta:
+                - name
+                - email
+            placeholder:
+            locale:
+            admin: Eason
+            widgets:
+            homepage: []
+            page: []
+
+
+        twikoo:
+            envId:
+            region:
+            path:
+            lang:
+
+        # See https://cactus.chat/docs/reference/web-client/#configuration for description of the various options
+        cactus:
+            defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
+            serverName: "cactus.chat"
+            siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
+
+        giscus:
+            repo:
+            repoID:
+            category:
+            categoryID:
+            mapping:
+            lightTheme:
+            darkTheme:
+            reactionsEnabled: 1
+            emitMetadata: 0
+
+        gitalk:
+            owner:
+            admin:
+            repo:
+            clientID:
+            clientSecret:
+
+        cusdis:
+            host:
+            id:
+    widgets:
+        homepage:
+            - type: search
+            - type: archives
+              params:
+                  limit: 5
+            - type: categories
+              params:
+                  limit: 10
+            - type: tag-cloud
+              params:
+                  limit: 10
+        page:
+            - type: toc
+
+    opengraph:
+        twitter:
+            # Your Twitter username
+            site:
+
+            # Available values: summary, summary_large_image
+            card: summary_large_image
+
+    defaultImage:
+        opengraph:
+            enabled: false
+            local: false
+            src:
+
+    colorScheme:
+        # Display toggle
+        toggle: true
+
+        # Available values: auto, light, dark
+        default: auto
+
+    imageProcessing:
+        cover:
+            enabled: true
+        content:
+            enabled: true
+
+### Custom menu
+### See https://docs.stack.jimmycai.com/configuration/custom-menu.html
+### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
-    main:
-        - identifier: home
-          name: 主页
-          url: /
-          weight: -100
-          params:
-              newTab: false
-              icon: home
-
-        - identifier: categories
-          name: 分类
-          url: /categories
-          weight: -85
-          params:
-              newTab: false
-              icon: home
-
-        - identifier: rss
-          name: RSS
-          url: /index.xml
-          weight: -10
-          params:
-              newTab: true
-              icon: rss
+    main: []
 
     social:
         - identifier: github
           name: GitHub
-          url: https://github.com/easonxiang
+          url: https://github.com/CaiJimmy/hugo-theme-stack
           params:
               icon: brand-github
 
@@ -115,21 +193,20 @@ related:
         - name: categories
           weight: 200
 
-markup: # **Markup Section 非常重要**
+markup:
+    goldmark:
+        renderer:
+            ## Set to true if you have HTML content inside Markdown
+            unsafe: false
     tableOfContents:
-        endLevel: 5 # 从 5 结束
+        endLevel: 4
         ordered: true
-        startLevel: 2 # 从 2 开始
-    highlight: # 代码高亮配置，对 Pandoc 而言似乎是没用的。稍后会提到如何使代码高亮
-        anchorLineNos: false
+        startLevel: 2
+    highlight:
+        noClasses: false
         codeFences: true
-        guessSyntax: false
-        hl_Lines: ""
-        lineAnchors: ""
+        guessSyntax: true
         lineNoStart: 1
         lineNos: true
         lineNumbersInTable: true
-        noClasses: true
-        style: dracula
         tabWidth: 4
-
