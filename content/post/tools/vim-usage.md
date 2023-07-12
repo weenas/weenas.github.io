@@ -17,7 +17,7 @@ VIM的强大无须多说，最强大的代码编辑器之一。多年使用下�
 
 <!--more-->
 
-# vimrc
+## vimrc
 
 通常VIM启动时自动加载两个配置文件：/etc/vimrc和~/.vimrc，前一个是系统级的配置，后一个是用户级的配置。系统级配置需要root权限，如果是在公共服务器上一般没有这个权限，所以修改用户级的配置是更好的选择。
 
@@ -183,19 +183,19 @@ let Tlist_Inc_Winwidth=0
 let Tlist_File_Fold_Auto_Close=1
 ```
 
-# Ctags配置
+## Ctags配置
 
 Ctags是一个外部工具，它能将源代码中的符号生成到一个tags文件，VIM启动时会默认从当前目录读取tags文件。
 
 Ctags的安装很简单，在Ubuntu下的命令如下：
 
-```
+```bash
 sudo apt-get install ctags
 ```
 
 在源码根目录生成tags文件：
 
-```
+```bash
 ctags -R *
 ```
 
@@ -213,7 +213,7 @@ tags生成后不会随着源文件的修改而改变，因此源文件修改后t
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 ```
 
-# Taglist配置
+## Taglist配置
 
 Taglist的作用是将VIM当前源文件中的所有符号罗列出来，形成单独的一栏，通过这些符号列表可以直接跳转到定义的地方，这个功能很像是Windows上的一些IDE工具。
 
@@ -256,13 +256,13 @@ Cscope和Ctags比较类似，都是用于快速查找定位的工具，但Cscope
 
 安装：
 
-```
+```bash
 sudo apt-get install cscope
 ```
 
 和ctags一样，cscope也需要先建立索引文件，我一般采用增加命令的方法。将下面的配置放到~/.bashrc中，命令行中就可以使用buildref命令快速生成索引文件。
 
-```
+```bash
 buildref()
 {
 	find -name "*.[chsS]" -o -name "*.cpp" -o -name "*.java" > cscope.files
@@ -272,7 +272,7 @@ buildref()
 
 Cscope的使用指令也较复杂，只有使用快捷键才能体现出他的强大之处，将下面的配置保存为cscope_maps.vim放到~/.vim/plugin目录，就能轻松的使用Cscope了。
 
-```
+```bash
 if has("cscope")
 " use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
 set cscopetag

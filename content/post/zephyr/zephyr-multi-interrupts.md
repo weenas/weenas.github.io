@@ -19,7 +19,7 @@ keywords:
 
 如果系统只需要一级中断，生成的isr table（中断向量表）看起来比较简单，编译后生成的路径在`zephyr/isr_tables.c`
 
-```
+```c
 struct _isr_table_entry {
     void *arg;
     void (*isr)(void *);
@@ -32,7 +32,7 @@ struct _isr_table_entry __sw_isr_table _sw_isr_table[160] = {
     {(void *)0x3, (void *)0x109e01},
     {(void *)0x4, (void *)0x109e01},
     {(void *)0x5, (void *)0x109e01}
-	};
+};
 ```
 
 可以看到，在32位系统中isr table的每一个entry占用8 bytes，前4 bytes为参数，后4 bytes为handler。isr table的大小由`CONFIG_NUM_IRQS`决定，可以根据需要调整。
@@ -98,7 +98,7 @@ D -> 0x00030609
 
 现假设上述宏的定义如下
 
-```
+```c
 #define CONFIG_MULTI_LEVEL_INTERRUPTS 1
 #define CONFIG_2ND_LEVEL_INTERRUPTS 1
 #define CONFIG_3ND_LEVEL_INTERRUPTS 1
@@ -148,7 +148,7 @@ isr_table
 
 定义了中断号后，注册多级中断和注册普通中断一样，例如我们要注册上面设备C的中断：
 
-```
+```c
 IRQ_CONNECT(0x00000409, DEVICE_C_IRQ_PRIO, uwp_ictl_isr, 0, 0);
 irq_enable(0x00000409);
 ```
@@ -159,7 +159,7 @@ irq_enable(0x00000409);
 
 多级中断服务程序被触发后，需要根据中断状态寄存器对中断进行分发。分发函数需要当前的中断状态以及当前中断控制器在isr_table的起始位置，起始位置可以根据上图获取到，分发时按中断状态的每一位依次分发，保证每一个中断都可以被处理到。
 
-```
+```c
 static ALWAYS_INLINE void uwp_dispatch_child_isrs(u32_t intr_status,
                               u32_t isr_base_offset)
 {

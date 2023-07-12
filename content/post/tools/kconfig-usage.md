@@ -11,13 +11,16 @@ keywords:
   - kconfiglib
 ---
 
-# 简介
+## 简介
+
 Kconfig来源于Linux Kernel，用于在项目中对各种选项进行配置，以达到仅修改config文件就可以控制开关Module（Feature）的目的。也就是说，使用同一份源代码配合不同的config文件，可以编译出功能各异的bin文件。
 
-# Kconfig实现方式
+## Kconfig实现方式
+
 早期的Kconfig只能在Kernel中使用，现在由于它的易用性被广泛使用于各种大型项目，包括NuttX，buildroot，crosstool-NG，uClibc，openWRT，Zephyr等项目。目前主流的Kconfig有两种实现方式：kconfig-frontends和Kconfiglib
 
-## kconfig-frontends
+### kconfig-frontends
+
 kconfig-frontends是C语言实现的版本，使用的是Kernel的Kconfig源码，独立于Kernel进行管理。
 优点
 - 兼容性最好
@@ -26,7 +29,8 @@ kconfig-frontends是C语言实现的版本，使用的是Kernel的Kconfig源码�
 - 不支持跨平台
 - 默认只能支持输出.config
 
-## Kconfiglib
+### Kconfiglib
+
 Kconfiglib是用Python实现的一个库，兼容Kconfig的所有语法。
 优点
 - 跨平台使用
@@ -36,11 +40,14 @@ Kconfiglib是用Python实现的一个库，兼容Kconfig的所有语法。
 > .config用于把配置输出给Makefile或者CMake: CONFIG_XXX=100
 > config.h用于把配置输出给源代码: #define CONFIG_XXX 100
 
-# 常用语法
+## 常用语法
+
 官方说明文档：https://www.kernel.org/doc/html/latest/kbuild/kconfig-language.html
 
-## config
+### config
+
 config是Kconfig最基础的语法，每个config会生成一个CONFIG_XXX配置
+
 ```sh
 config XXX
     bool "Enable XXX"
@@ -48,20 +55,26 @@ config XXX
     help
         Enable XXX module.
 ```
+
 config支持不同的配置类型，常用的有bool，string，int，hex四种类型
 
-## menu
+### menu
+
 menu可以生成二级菜单，多个menu同时使用可以生成多级菜单。
 menu不会生成config配置，作用仅是为了组织config结构
+
 ```sh
 menu "2nd Menu"
 endmenu
 ```
+
 > 注意：menu和endmenu需要配对使用
 
-## menuconfig
+### menuconfig
+
 menuconfig是menu和config的结合体，不仅生成菜单，同时也会生成config配置。
 和menu不同的是只有Enable这个配置才能进入一下级菜单，一般用于模块和模块内部选项配置
+
 ```sh
 menuconfig MENU_XXX
     bool "MENU XXX"
@@ -70,8 +83,10 @@ menuconfig MENU_XXX
         Menu XXX
 ```
 
-## choice
+### choice
+
 choice提供单选功能，当只能在多个配置中选择一个时可以使用，比如选择平台使用VDK，FPGA或者SOC时，使用choice可以避免人为的配置错误发生。
+
 ```sh
 choice
     bool "Choice Sample"
@@ -84,10 +99,13 @@ config CHOICE_C
     bool "Choice C"
 endchoice
 ```
+
 > 注意：choice和endchoice需要配对使用
 
-## if, depends on, select
+### if, depends on, select
+
 这些是Kconfig的条件用法，可以从配置上去控制模块之间的依赖关系
+
 ```sh
 config MODULE_A
     bool "module a"
@@ -105,16 +123,19 @@ config MODULE_E
     bool "module e"
 ```
 
-## source
+### source
+
 source的作用是包含下级Kconfig文件，方便开发时把Kconfig设计为树形结构，在模块内部添加编写config配置。不管config在哪个Kconfig文件，所有的config都是全局可见的，所以if，depends on和select可以引用其它模块的config配置。
 
-# 示例
-## Kconfig文件
+## 示例
+
+### Kconfig文件
+
 ```sh
-mainmenu "XRing Project"
+mainmenu "Sample Project"
 config AUTHOR
     string "Author"
-    default "XRing"
+    default "Sample"
     help
         Author of this project.
 config MAJOR_VER
@@ -199,8 +220,10 @@ config MODULE_E
 endmenu
 ```
 
-## 运行
+### 运行
+
 下载Kconfiglib: https://github.com/ulfalizer/Kconfiglib
+
 ```sh
 python Kconfiglib/menuconfig.py Kconfig
 ```
