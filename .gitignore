@@ -31,3 +31,4 @@
 public
 resources
 *.lock
+*.DS_Store
