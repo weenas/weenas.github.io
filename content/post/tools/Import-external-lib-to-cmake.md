@@ -13,7 +13,7 @@ hide: true
 
 在项目中有时会用到第三方的lib库，如果使用CMake可以非常方便的导入到项目中。
 
-# 示例
+## 示例
 
 假如现有一个外部静态库libexternal.a，我们要用到库里的接口，可以采用下列代码新建一个newlib：
 
@@ -30,7 +30,7 @@ target_include_directories(${lib} INTERFACE .)
 target_link_libraries(${TARGET_NAME} ${lib})
 ```
 
-# 释义
+## 释义
 
 `add_library`接口建立一个新库，如果是静态库使用`STATIC`参数，动态库则使用`SHARED`参数。
 
