@@ -68,7 +68,7 @@ params:
 
     comments:
         enabled: true
-        provider: gitalk
+        provider: waline
         waline:
             serverURL: https://waline.weenas.com/
             lang: zh-CN
@@ -113,11 +113,11 @@ params:
             emitMetadata: 0
 
         gitalk:
-            owner: eason
-            admin: easonxiang@gmail.com
-            repo: https://github.com/weenas/weenas.github.io
-            clientID: bc4f9fe442fdb07a3c18
-            clientSecret: 95c8ba47671e07207c65c2ad50791d21c0b31473
+            owner: "eason"
+            admin: "easonxiang@gmail.com"
+            repo: "github.com/weenas/weenas.github.io"
+            clientID: "bc4f9fe442fdb07a3c18"
+            clientSecret: "95c8ba47671e07207c65c2ad50791d21c0b31473"
 
         cusdis:
             host:
