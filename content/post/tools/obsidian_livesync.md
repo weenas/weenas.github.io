@@ -1,5 +1,6 @@
 ---
 title: Obsidian多设备实时同步方法
+slug: obsidian_livesync
 image: https://yun.weenas.com:8006/i/2023/06/04/647c51afc516e.png
 date: 2023-06-04
 tags: 

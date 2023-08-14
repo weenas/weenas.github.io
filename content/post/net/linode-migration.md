@@ -1,5 +1,6 @@
 ---
 title: linode 迁移
+slug: linode_migration
 image: https://yun.weenas.com:8006/i/2023/06/04/647c0b71201f2.jpg
 date: 2017-01-08
 tags:

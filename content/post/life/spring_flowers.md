@@ -1,5 +1,6 @@
 ---
 title: 春日赏花
+slug: spring_flowers
 image: https://yun.weenas.com:8006/i/2023/06/04/647c153e7a307.jpg
 date: 2023-06-05
 tags:

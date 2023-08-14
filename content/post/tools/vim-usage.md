@@ -1,5 +1,6 @@
 ---
 title: vim 常用配置
+slug: vim_usage
 date: 2017-02-03
 tags:
 description: "代码编辑器中的瑞士军刀。"

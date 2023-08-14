@@ -1,5 +1,6 @@
 ---
 title: Kconfig 简介
+slug: kconfig_usage
 image: https://yun.weenas.com:8006/i/2023/06/04/647c0b7034e3e.png
 date: 2022-06-05
 tags:

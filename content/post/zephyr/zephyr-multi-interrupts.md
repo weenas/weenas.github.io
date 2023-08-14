@@ -1,5 +1,6 @@
 ---
 title: Zephyr 多级中断
+slug: zephyr_multi_interrupts
 image: https://yun.weenas.com:8006/i/2023/06/04/647c0b7345785.jpg
 date: 2019-01-17
 tags:

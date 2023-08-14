@@ -1,5 +1,6 @@
 ---
 title: linode 使用记
+slug: linode_usage
 image: https://yun.weenas.com:8006/i/2023/06/04/647c0b71201f2.jpg
 date: 2016-12-21 14:48:15
 tags:

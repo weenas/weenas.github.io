@@ -1,5 +1,6 @@
 ---
 title: 如何创建私有图床
+slug: lsky_pro_usage
 image: https://yun.weenas.com:8006/i/2023/06/04/647c5f5177d43.png
 date: 2023-06-04
 tags:

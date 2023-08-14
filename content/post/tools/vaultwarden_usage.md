@@ -1,5 +1,6 @@
 ---
 title: Vaultwarden 使用介绍
+slug: vaultwarden_usage
 image: https://yun.weenas.com:8006/i/2023/08/13/64d8e41416432.png
 date: 2023-08-13
 tags:
