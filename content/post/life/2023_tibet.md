@@ -2,6 +2,7 @@
 title: "2023年西藏自驾游"
 slug: 2023_tibet
 date: 2024-06-07T15:58:29+08:00
+image: https://yun.weenas.com:8006/i/2024/06/07/666306cc2aa17.jpg
 categories:
   - 旅游
   - 摄影
