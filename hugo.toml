@@ -2,3 +2,11 @@ baseURL = '/'
 languageCode = 'zh-cn'
 title = '云淡风轻'
 theme = 'stack'
+
+[params]
+  subtitle = 'Nothing is important.'
+  [params.contact]
+    email = 'eason@weenas.com'
+
+[permalinks]
+  post = "/post/:slug"

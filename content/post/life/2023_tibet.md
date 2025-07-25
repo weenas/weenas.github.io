@@ -1,6 +1,6 @@
 ---
-title: "2023年西藏自驾游"
-slug: 2023_tibet
+title: 2023年西藏自驾游
+slug: bcc7294e
 date: 2024-06-07T15:58:29+08:00
 image: https://yun.weenas.com:8006/een1q3.jpg
 categories:

@@ -1,15 +1,15 @@
 ---
 title: Zephyr 多级中断
-slug: zephyr_multi_interrupts
+slug: 7759f387
 image: https://yun.weenas.com:8006/i/2023/06/04/647c0b7345785.jpg
 date: 2019-01-17
-tags:
-description: "采用一种很巧妙的方式实现多级中断，为中断设计提供参考。"
+tags: 
+description: 采用一种很巧妙的方式实现多级中断，为中断设计提供参考。
 categories:
- - Zephyr
+  - Zephyr
 keywords:
- - zephyr
- - interrupt
+  - zephyr
+  - interrupt
 ---
 
 理解中断子系统有利于我们更好的理解操作系统的工作原理，每个OS实现中断子系统的方式各不相同。 Linux一般采用动态注册的方式可以在系统运行过程中把中断Handler注册给OS，而Zephyr系统为了减小image大小采用静态注册的方式，在编译过程中把所有IRQ_CONNECT解析为isr table。

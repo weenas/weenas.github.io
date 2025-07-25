@@ -1,10 +1,10 @@
 ---
 title: 家庭网络结构
-slug: home_network
+slug: e414bb66
 image: https://yun.weenas.com:8006/FYn4Vq.png
 date: 2024-06-06
-tags:
-description:
+tags: 
+description: 
 categories:
   - 网络
 keywords:

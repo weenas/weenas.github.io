@@ -1,10 +1,10 @@
 ---
 title: Vaultwarden 使用介绍
-slug: vaultwarden_usage
+slug: e6b06417
 image: https://yun.weenas.com:8006/T2NDqO.png
 date: 2023-08-13
-tags:
-description: "Bitwarden自定义替代，密码集中管理工具"
+tags: 
+description: Bitwarden自定义替代，密码集中管理工具
 categories:
   - 工具
 keywords:

@@ -1,9 +1,9 @@
 ---
 title: CMake如何导入外部库
-slug: Import_external_lib_to_cmake
+slug: e9d6206c
 date: 2021-12-03
-tags:
-description: "How to import external static library in CMake."
+tags: 
+description: How to import external static library in CMake.
 categories:
   - 工具
 keywords:

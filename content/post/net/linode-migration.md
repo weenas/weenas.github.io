@@ -1,9 +1,9 @@
 ---
 title: linode 迁移
-slug: linode_migration
+slug: 0c2be4d8
 image: https://yun.weenas.com:8006/sUN8UI.jpg
 date: 2017-01-08
-tags:
+tags: 
 categories:
   - 网络
   - VPS

@@ -1,9 +1,9 @@
 ---
-title: "Openwrt 透明代理"
-slug: "Openwrt_transparent_proxy"
-image: "https://yun.weenas.com:8006/gtB7gP.png"
+title: Openwrt 透明代理
+slug: c81514bf
+image: https://yun.weenas.com:8006/gtB7gP.png
 date: 2023-08-14T15:13:18+08:00
-description: "家庭代理新方案"
+description: 家庭代理新方案
 categories:
   - 网络
 keywords:

@@ -1,10 +1,10 @@
 ---
 title: linode 使用记
-slug: linode_usage
+slug: 8db64a10
 image: https://yun.weenas.com:8006/sUN8UI.jpg
 date: 2016-12-21 14:48:15
-tags:
-description: "VPS初体验"
+tags: 
+description: VPS初体验
 categories:
   - 网络
   - VPS

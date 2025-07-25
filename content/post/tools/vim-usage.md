@@ -1,9 +1,9 @@
 ---
 title: vim 常用配置
-slug: vim_usage
+slug: 1054ef71
 date: 2017-02-03
-tags:
-description: "代码编辑器中的瑞士军刀。"
+tags: 
+description: 代码编辑器中的瑞士军刀。
 categories:
   - 工具
 keywords:

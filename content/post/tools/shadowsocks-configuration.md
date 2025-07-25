@@ -1,8 +1,8 @@
 ---
 title: Shadowsocks Configuration
-slug: shadowsocks_config
+slug: 216698eb
 date: 2017-12-06 15:56:43
-tags:
+tags: 
 categories:
   - 工具
 ---

@@ -1,15 +1,15 @@
 ---
 title: CMake 历史和原理简析
-slug: cmake_history
+slug: 51de2551
 image: https://cmake.org/wp-content/uploads/2023/08/Cross_Platform_Testing.png
 date: 2024-07-09
-tags:
-description: "本文介绍了开发CMake的原因和一些有趣的经历,并简单介绍了CMake的基本原理和处理流程."
+tags: 
+description: 本文介绍了开发CMake的原因和一些有趣的经历,并简单介绍了CMake的基本原理和处理流程.
 categories:
- - CMake
- - 翻译
+  - CMake
+  - 翻译
 keywords:
- - cmake
+  - cmake
 ---
 
 原文地址：[The Architecture of Open Source Applications (aosabook.org)](https://aosabook.org/en/)

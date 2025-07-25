@@ -1,10 +1,10 @@
 ---
 title: 春日赏花
-slug: spring_flowers
+slug: 6855c8bd
 image: https://yun.weenas.com:8006/1cRZUI.jpg
 date: 2023-06-05
-tags:
-description: "花开的季节，记录花开的声音！"
+tags: 
+description: 花开的季节，记录花开的声音！
 categories:
   - 生活
   - 摄影

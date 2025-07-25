@@ -1,10 +1,10 @@
 ---
 title: Wi-Fi Direct 协议
-slug: wifi_direct
+slug: 043cc525
 image: https://yun.weenas.com:8006/r1NqAV.png
 date: 2016-12-22
-tags:
-description: "一种不需要通过Wi-Fi路由器通信的Wi-Fi协议。"
+tags: 
+description: 一种不需要通过Wi-Fi路由器通信的Wi-Fi协议。
 categories:
   - Wi-Fi
 keywords:
