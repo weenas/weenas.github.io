@@ -1,7 +1,7 @@
 ---
 title: Kconfig 简介
 slug: kconfig_usage
-image: https://yun.weenas.com:8006/i/2023/06/04/647c0b7034e3e.png
+image: https://yun.weenas.com:8006/8l3G1D.png
 date: 2022-06-05
 tags:
 description: "通过Kconfig为软件工程增加可配置功能，模块编译的基础。"

@@ -1,7 +1,7 @@
 ---
 title: Wi-Fi Direct 协议
 slug: wifi_direct
-image: https://yun.weenas.com:8006/i/2023/06/04/647c0b5b42dac.png
+image: https://yun.weenas.com:8006/r1NqAV.png
 date: 2016-12-22
 tags:
 description: "一种不需要通过Wi-Fi路由器通信的Wi-Fi协议。"
@@ -38,7 +38,7 @@ P2P Group Client：简称GC，组协商成为Station的P2P Device称为P2P GC
 ## 流程图
 
 首先，来看一下Wi-Fi Direct连接的详细流程，下面这张图涵盖了Wi-Fi Direct的大部分功能，包括设备的发现、组协调、认证关联、WPS以及4次握手。
-![wifi_direct.jpg](https://yun.weenas.com:8006/i/2023/06/04/647c0b5df05cd.jpg)
+![wifi_direct.jpg](https://yun.weenas.com:8006/MHkmdg.jpg)
 
 ## 设备发现
 
@@ -51,10 +51,10 @@ P2P Group Client：简称GC，组协商成为Station的P2P Device称为P2P GC
 ## GO协商
 
 发现对方后，下一步就点击进行连接，而连接的第一步要确认各自的角色：谁做GO，谁做GC。Wi-Fi Direct通过增加Action帧的交互来达到此目的，这个交互非常简单，如下图如示：
-![go_determination.jpg](https://yun.weenas.com:8006/i/2023/06/04/647c0b5ec10d9.jpg)
+![go_determination.jpg](https://yun.weenas.com:8006/wudgvS.jpg)
 
 GO协商共包含三个类型的Action帧：GO Req、GO Resp、GO Confirm。GO Req和GO Resp包含GO Intent的IE，是一个0到15的整数值，通过这两个值的大小来确定GO，具体方法如下图。如果Intent不相等时，谁大谁做GO；如果相等时且小于15时，根据GO Req的随机数Tie Breaker来决定，Tie Break为1就自己做GO，否则对方做GO；如果相等且等于15，GO协商失败，这种情况说明A和B都必须成为GO，谁也不能妥协，那么只能以失败告终。
-![group_formation.jpg](https://yun.weenas.com:8006/i/2023/06/04/647c0b5c35b3d.jpg)
+![group_formation.jpg](https://yun.weenas.com:8006/DmB8g7.jpg)
 
 事实上，一般情况下GO协商会有5个帧交互，P2P流程图已经清晰的展现出来了，一开始会让人比较迷惑，下面举例说明。假设有两个P2P设备A（Listen信道为1）和B（Listen信道为11），在A的P2P界面点击B进行连接，这时A首先会在11信道发送GO Req，发送需要持续一段时间，因为B可能会处于Search状态，所以持续的时间至少要大于B的Search时间；直到B切换为Listen状态，才能收到 GO Req，收到后立即在11信道回复GO Resp并给上层应用发送对应消息，应用提示用户是否同意A的连接。注意B刚刚回复的GO Resp包含的状态是fail:information is unavailable，A收到这个消息后不做任何动作，继续等待。直到用户点击B的同意后，B会再发起GO Req，由于A是连接发起方，他不用再去提醒用户同意，直接响应成功的GO Resp。最后B通过GO Confirm确认GO协商结束。
 
