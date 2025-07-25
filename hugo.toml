@@ -1,0 +1,4 @@
+baseURL = '/'
+languageCode = 'zh-cn'
+title = '云淡风轻'
+theme = 'hugo-theme-stack'
