@@ -1,7 +1,7 @@
 ---
 title: Zephyr 多级中断
 slug: 7759f387
-image: https://yun.weenas.com:8006/i/2023/06/04/647c0b7345785.jpg
+image: https://yun.weenas.com:8006/bmUTlD.jpg
 date: 2019-01-17
 tags: 
 description: 采用一种很巧妙的方式实现多级中断，为中断设计提供参考。
