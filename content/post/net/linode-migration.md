@@ -1,7 +1,7 @@
 ---
 title: linode 迁移
 slug: linode_migration
-image: https://yun.weenas.com:8006/i/2023/06/04/647c0b71201f2.jpg
+image: https://yun.weenas.com:8006/sUN8UI.jpg
 date: 2017-01-08
 tags:
 categories:
@@ -28,6 +28,6 @@ Linode的稳定性一直是被广大网友所称道的，之前创建的时候�
 2. 迁移后IP地址会发生变化，所以迁移后要马上到域名提供商修改域名解析地址。
 
 可能是为了避免用户进行频繁的迁移，Linode在管理界面并不提供迁移功能，要迁移的话只能通过Ticket告诉客服，由客服在后台操作。前一篇已经介绍过了，Linode的客服非常的友好并且专业，你提出请求后一般都会很快的得到答复。我在迁移时刚好遇到日本机房容量不足，因此客服告诉我将我添加到waitlist，待新增机组调试好后立即通知我。大概4天之后收到了客服发来的邮件：
-![linode_migration.jpg](https://yun.weenas.com:8006/i/2023/06/04/647c0b743d0b8.jpg)
+![linode_migration.jpg](https://yun.weenas.com:8006/6UiDmI.jpg)
 
 如果收到上面这封邮件，那么说明迁移工作已经准备好，你只需按照邮件里的步骤：关机、迁移、再开机就完成了。使用新的IP地址登录进去，一切都没有变化，唯一的变化就是速度快了，SSH和网页的响应速度都有明显的提升。

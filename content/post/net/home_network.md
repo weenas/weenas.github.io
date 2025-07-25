@@ -1,7 +1,7 @@
 ---
 title: 家庭网络结构
 slug: home_network
-image: https://yun.weenas.com:8006/i/2023/06/25/6498220f4f1f3.png
+image: https://yun.weenas.com:8006/FYn4Vq.png
 date: 2024-06-06
 tags:
 description:
@@ -13,7 +13,7 @@ keywords:
 ## 概述
 随着家庭网络设备的不断增加，对于网络的要求越来越高，如何提升网络的性能和稳定性是一个需要考虑的问题。
 经过一段时间的优化，目前家庭网络的拓扑图如下。由于家庭网络设备大都只能支持1000Mbps，基于经济原则，所有网络基础设备都是千兆。
-![1687615735277.png](https://yun.weenas.com:8006/i/2023/06/24/6496f91079534.png)
+![1687615735277.png](https://yun.weenas.com:8006/BasAov.png)
 
 ## Modem
 
@@ -28,7 +28,7 @@ Modem除了有一个口接到网关外，还有一个口可以接IPTV，用于�
 网关也称为路由器，用于路由内部网络的网络数据包，并提供DHCP、DNS等网络服务，同时也提供防火墙功能，保护内部网络设备的网络安全。
 
 网关设备选用[Linksys WRT1900ACS](https://www.linksys.com/wrt1900acs-dual-band-wi-fi-router-with-ultra-fast-1.6-ghz-cpu/WRT1900ACS.html)
-![1687691790396.png](https://yun.weenas.com:8006/i/2023/06/25/6498220f4f1f3.png)
+![1687691790396.png](https://yun.weenas.com:8006/FYn4Vq.png)
 
 选用Linksys的设备主要是考虑到能更好的支持开源固件OpenWRT，双核1.6GHz的CPU，以及128MB Nand和512MB RAM，也能够提供不错的性能和扩展能力。该路由器本身支持802.11ac，但考虑到需要放到弱电箱，一个无线路由器也不能覆盖家庭的各个角落，因此在刷了OpenWRT固件后将无线功能禁用，只使用有线功能。
 
@@ -39,7 +39,7 @@ OpenWRT的配置比较简单，这里不作详细描述，后面会介绍基于O
 路由器一般只能提供1个WAN口和4个Lan口，在有较多有线网络设备的情况下并不能满足需求，因此需要加入千兆交换机（Switch）。从前面的网络拓扑图能够看出，在没有将全部网络设备画出来的情况下，8口的交换机已经不够，根据装修预埋网线的情况选择16口网管交换机。
 
 交换机选用[Netgear GS116E](https://www.netgear.com/cn/business/wired/switches/plus/gs116ev2/)
-![1687699248048.jpg](https://yun.weenas.com:8006/i/2023/06/25/64983f3900023.jpg)
+![1687699248048.jpg](https://yun.weenas.com:8006/UAsPCj.jpg)
 
 16口千兆交换机，支持VLAN和链路聚合，全金属外壳，质感不错。唯一的缺点是不支持PoE，导致不能使用PoE 无线AP和PoE网络摄像头，这是以后需要升级的地方。
 
@@ -54,7 +54,7 @@ OpenWRT的配置比较简单，这里不作详细描述，后面会介绍基于O
 好点的AC + AP方案一般有独立AC控制器，用于无线网络的独立认证并控制AP之间的协作。相较于Wi-Fi Mesh，这是更专业的方案，一般用于企业或大型公共场所。家庭使用的话成本较高，再加上我的弱电箱已经放不下多余的设备，所以我选择了对于大众用户更便捷的方案。
 
 Wi-Fi AP使用[Linksys Velop AC3900](https://www.linksys.com/ca/dual-band-intelligent-mesh-wifi-5-system-3-pack/WHW0103-CA.html)
-![1687700043972.jpg](https://yun.weenas.com:8006/i/2023/06/25/6498424c31267.jpg)
+![1687700043972.jpg](https://yun.weenas.com:8006/5O29t1.jpg)
 
 Velop AC3900由3台相同的AC1300组成，组网时其中一台作为主设备，其他两台作为从设备自动组成Wi-Fi Mesh网络。支持网络设备在3台AP之间漫游，并支持无线组网和有线组网，当采用无线组网时只需要主设备连接网线，从设备采用独立的无线信道和主设备交换信息。我在装修时在每个房间布了有线网络，因此选用有线组网，即每台AP都连接网线，这样网络质量更有保障。
 AC1300的最大带宽是867Mbps(5GHz) + 400Mbps(2.4GHz)，连接5G频段的情况下理论速率接近千兆网络的最大带宽。所以在千兆网络环境里，这样的组网方式是更经济有效的。当然在多设备连接同一个AP时会共享最大带宽，如果升级为Wi-Fi 6会是更好的选择。这时可以选择Linksys AX5400，根据需要和AC1300可以一起组网。
